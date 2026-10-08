@@ -2,6 +2,17 @@ const form = document.querySelector("#formCadastro");
 const buscarCep = document.querySelector("#buscarCep");
 const cep = document.querySelector("#cep");
 
+function mensagem ( texto, tipo = "sucesso")
+Toastify ({
+    text: texto,
+    duration:3000,
+    gravity: "top"
+    position: "right",
+    style: {
+        background: tipo === "sucesso"
+    }
+})
+
 // escuta o evento do formulário
 form.addEventListener("submit", function (event) {
   event.preventDefault();
